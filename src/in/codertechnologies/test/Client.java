@@ -18,6 +18,7 @@ import org.springframework.core.io.Resource;
 import in.codertechnologies.dao.ProjectDao;
 import in.codertechnologies.daoImpl.ProjectHibernateDaoImpl;
 import in.codertechnologies.model.Project;
+import in.codertechnologies.service.ProjectService;
 
 
 public class Client {
@@ -33,28 +34,30 @@ public class Client {
 		BeanFactory beanFactory = new XmlBeanFactory(resource); */
 		
 		ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml"); 
-		ProjectDao dao=(ProjectDao)ctx.getBean("projectDao"); 
+		//ProjectDao dao=(ProjectDao)ctx.getBean("projectDao"); 
+		
+		ProjectService projectService=(ProjectService) ctx.getBean(ProjectService.class);
 		
 		Project project=new Project();
 		
 		/*project.setProjectId("107");
-		project.setProjectName("digiMarketing");
+		project.setProjectName("bookstore1");
 		project.setStartDate(new Date(0));
 		project.setEndDate(new Date(0));
-		project.setPriority(50);
-		project.setManager("kiran");*/
+		project.setPriority(65);
+		project.setManager("ramraja");*/
 	    
-		//dao.addProject(project); 
+		//projectService.addProject(project); 
 		
-		//dao.deleteProjectById(10);
+		//projectService.deleteProjectById(1110);
 		
-		//dao.updateProjectById(project);
+		//projectService.updateProjectById(project);
 		
-		/*String projectName=dao.findProjectNameById(105);
+		/*String projectName=projectService.findProjectNameById(107);
 		System.out.println(projectName);*/
 		
 		List<Project> li=new ArrayList<Project>();
-		li=dao.findAllProject();
+		li=projectService.findAllProject();
 		System.out.println(li);
 		Iterator<Project> p=li.iterator();
 		
@@ -63,6 +66,12 @@ public class Client {
 			System.out.println(p.next());
 		}
 		
+		
+		
+	  /*project=projectService.findById(111);
+	  System.out.println(project);*/
+		
+		//projectService.deleteAll();
 		
 		
 		

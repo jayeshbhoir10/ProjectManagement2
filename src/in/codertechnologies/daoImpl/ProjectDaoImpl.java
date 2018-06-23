@@ -18,6 +18,8 @@ public class ProjectDaoImpl implements ProjectDao{
 	private String deleteProjectById;
 	private String findProjectById;
 	private String findAll;
+	private String findById;
+	private String deleteAllProject;
 
 	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
 		this.jdbcTemplate = jdbcTemplate;
@@ -46,6 +48,15 @@ public class ProjectDaoImpl implements ProjectDao{
 
 	public void setFindAll(String findAll) {
 		this.findAll = findAll;
+	}
+	
+	public void setFindById(String findById) {
+		this.findById = findById;
+	}
+
+
+	public void setDeleteAllProject(String deleteAllProject) {
+		this.deleteAllProject = deleteAllProject;
 	}
 
 
@@ -92,13 +103,14 @@ public class ProjectDaoImpl implements ProjectDao{
 	@Override
 	public Project findById(int projectId) {
 		// TODO Auto-generated method stub
-		return null;
+		return (Project) jdbcTemplate.queryForObject(findById, new Object[] {projectId},Project.class);
 	}
 
 
 	@Override
 	public void deleteAll() {
-		// TODO Auto-generated method stub
+		
+		jdbcTemplate.update(deleteAllProject);
 		
 	}
 	
