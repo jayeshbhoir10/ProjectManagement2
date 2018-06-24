@@ -56,21 +56,22 @@ public class Client {
 		/*String projectName=projectService.findProjectNameById(107);
 		System.out.println(projectName);*/
 		
-		List<Project> li=new ArrayList<Project>();
+		/*List<Project> li=new ArrayList<Project>();
 		li=projectService.findAllProject();
-		System.out.println(li);
-		Iterator<Project> p=li.iterator();
 		
-		while(p.hasNext())
+		for(Project e:li)
 		{
-			System.out.println(p.next());
-		}
+			System.out.println(e);
+		}*/
 		
 		
 		
-	  /*project=projectService.findById(111);
-	  System.out.println(project);*/
-		
+	  
+	 Project projec1=projectService.findById(106);
+	  System.out.println(projec1);
+	  
+	  
+	  
 		//projectService.deleteAll();
 		
 		

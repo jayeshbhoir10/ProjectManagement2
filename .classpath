@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="C:/Users/Jigna/Downloads/org.springframework.jdbc-3.0.2.release.jar" sourcepath="C:/Users/Jigna/.m2/repository/org/springframework/spring-jdbc/3.0.2.RELEASE/spring-jdbc-3.0.2.RELEASE-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jigna/Downloads/org.springframework.transaction-3.1.0.release.jar/org.springframework.transaction-3.1.0.release.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Jigna/Downloads/mysql-connector-java-5.1.39.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jigna/Desktop/All JAR/org.springframework.jdbc-3.0.2.release.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
