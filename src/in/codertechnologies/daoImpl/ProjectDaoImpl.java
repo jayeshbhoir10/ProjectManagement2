@@ -6,9 +6,7 @@ import java.util.List;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-
 import in.codertechnologies.dao.ProjectDao;
-
 import in.codertechnologies.model.Project;
 
 
@@ -68,7 +66,7 @@ public class ProjectDaoImpl implements ProjectDao{
 	public void addProject(Project project) {
 		// TODO Auto-generated method stub
 		//String query="insert into project values('"+project.getProjectName()+"','"+project.getStartDate()+"','"+project.getEndDate()+"','"+project.getPriority()+"','"+project.getManager()+"','"+project.getProjectId()+"') ";
-	    jdbcTemplate.update(insertProject,project.getProjectName(),project.getStartDate(),project.getEndDate(),project.getPriority(),project.getManager(),project.getProjectId());
+	    jdbcTemplate.update(insertProject,project.getProjectId(),project.getProjectName(),project.getStartDate(),project.getEndDate(),project.getPriority(),project.getManager());
 	}
 
 

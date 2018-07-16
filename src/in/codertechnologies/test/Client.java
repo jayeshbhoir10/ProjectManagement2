@@ -40,14 +40,7 @@ public class Client {
 		
 		Project project=new Project();
 		
-		/*project.setProjectId("107");
-		project.setProjectName("bookstore1");
-		project.setStartDate(new Date(0));
-		project.setEndDate(new Date(0));
-		project.setPriority(65);
-		project.setManager("ramraja");*/
-	    
-		//projectService.addProject(project); 
+		 
 		
 		//projectService.deleteProjectById(1110);
 		
@@ -67,12 +60,28 @@ public class Client {
 		
 		
 	  
-	 Project projec1=projectService.findById(106);
-	  System.out.println(projec1);
+	/* Project projec1=projectService.findById(106);
+	  System.out.println(projec1);*/
 	  
 	  
 	  
 		//projectService.deleteAll();
+		int option=1;
+		switch(option)
+		{
+		case 1:
+			project.setProjectId("107");
+			project.setProjectName("bookstore1");
+			project.setStartDate(new Date(0));
+			project.setEndDate(new Date(0));
+			project.setPriority(65);
+			project.setManager("ramraja");
+			projectService.addProject(project);
+			
+			break;
+			
+		}
+	  
 		
 		
 		

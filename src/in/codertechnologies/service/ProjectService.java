@@ -6,18 +6,18 @@ import in.codertechnologies.model.Project;
 
 public interface ProjectService {
 
-	void addProject(Project project);
+	public void addProject(Project project);
 
-	void deleteProjectById(int projectId);
+	public void deleteProjectById(int projectId);
 
-	void updateProjectById(Project project);
+	public void updateProjectById(Project project);
 
-	String findProjectNameById(int projectId);
+	public String findProjectNameById(int projectId);
 
-	List<Project> findAllProject();
+	public List<Project> findAllProject();
 
-	Project findById(int projectId);
+	public Project findById(int projectId);
 
-	void deleteAll();
+	public void deleteAll();
 
 }
